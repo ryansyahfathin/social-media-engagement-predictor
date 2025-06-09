@@ -127,7 +127,6 @@ def download_and_load_data():
 # --- Load dataset ---
 try:
     df = download_and_load_data()
-    st.success("✅ Data berhasil dimuat dari Google Drive.")
 except Exception as e:
     st.error(f"❌ Gagal memuat data: {e}")
     st.stop()
