@@ -94,20 +94,23 @@ st.markdown(
         color: #3e2f1c;
     }
     </style>
-
-    <div style="display: flex; justify-content: center; gap: 30px; padding-bottom: 20px;">
-        <img src="assets/facebook.png" alt="Facebook" width="40">
-        <img src="assets/instagram.png" alt="Instagram" width="40">
-        <img src="assets/twitter.png" alt="Twitter" width="40">
-        <img src="assets/linkedin.png" alt="LinkedIn" width="40">
-        <img src="assets/x.png" alt="X" width="48">
-    </div>
     
     """,
     unsafe_allow_html=True
 )
 
-
+# --- Baris Icon berjajar di tengah ---
+cols = st.columns(5)
+with cols[0]:
+    st.image("assets/facebook.png", width=40)
+with cols[1]:
+    st.image("assets/instagram.png", width=40)
+with cols[2]:
+    st.image("assets/twitter.png", width=40)
+with cols[3]:
+    st.image("assets/linkedin.png", width=40)
+with cols[4]:
+    st.image("assets/x.png", width=48)
 
 @st.cache_data
 def download_and_load_data():
