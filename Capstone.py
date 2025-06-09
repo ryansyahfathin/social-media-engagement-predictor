@@ -43,7 +43,7 @@ st.markdown(
         background-color: #ffedd5 !important;  /* sedikit kontras pastel */
     }
     <div style="text-align: center;">
-        <h1>📈 Analisis Engagement Sosial Media</h1>
+        <h1>📊 Social Media Caption & Posting Analytics<</h1>
     </div>
 
     /* Fix warna tombol, teks input, dropdown, dsb. agar tetap kontras */
@@ -98,19 +98,19 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# --- Display Social Media Icons ---
-icon_cols = st.columns([1, 1, 1, 1, 1])
-
-with icon_cols[0]:
-    st.image("assets/facebook.png", width=40)
-with icon_cols[1]:
-    st.image("assets/instagram.png", width=40)
-with icon_cols[2]:
-    st.image("assets/twitter.png", width=40)
-with icon_cols[3]:
-    st.image("assets/linkedin.png", width=40)
-with icon_cols[4]:
-    st.image("assets/x.png", width=40)
+# --- Logo SocMed di tengah berjajar ---
+st.markdown(
+    """
+    <div style="display: flex; justify-content: center; gap: 30px; padding-bottom: 20px;">
+        <img src="assets/facebook.png" alt="Facebook" width="40">
+        <img src="assets/instagram.png" alt="Instagram" width="40">
+        <img src="assets/twitter.png" alt="Twitter" width="40">
+        <img src="assets/linkedin.png" alt="LinkedIn" width="40">
+        <img src="assets/x.png" alt="X" width="48">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 
 @st.cache_data
