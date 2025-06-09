@@ -181,7 +181,14 @@ def alternative_platform_suggestion(post_type, gender, age_group, platform_input
 
 @st.cache_resource
 def load_model_from_file():
-    model_path = "engagement_rate.pkl"  # Ganti sesuai lokasi file jika perlu
+    model_path = "engagement_rate.pkl"
+    model_file_id = '1KnVCvxqNc3qPQ6LxsYndH_RTNio9JnaU'
+    model_url = f"https://drive.google.com/uc?id={model_file_id}"
+
+    if not os.path.exists(model_path):
+        with st.spinner("📥 Mengunduh model..."):
+            gdown.download(model_url, model_path, quiet=False)
+
     if os.path.exists(model_path):
         return joblib.load(model_path)
     else:
