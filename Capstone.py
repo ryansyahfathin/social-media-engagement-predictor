@@ -10,6 +10,7 @@ from transformers import pipeline
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
+from PIL import Image
 
 # --- Konfigurasi Awal ---
 st.set_page_config(
@@ -41,7 +42,9 @@ st.markdown(
     .stDataFrame table tbody tr:nth-child(odd) {
         background-color: #ffedd5 !important;  /* sedikit kontras pastel */
     }
-
+    <div style="text-align: center;">
+        <h1>📈 Analisis Engagement Sosial Media</h1>
+    </div>
 
     /* Fix warna tombol, teks input, dropdown, dsb. agar tetap kontras */
     .stTextInput > div > div > input,
@@ -95,6 +98,19 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# --- Display Social Media Icons ---
+icon_cols = st.columns([1, 1, 1, 1, 1])
+
+with icon_cols[0]:
+    st.image("assets/facebook.png", width=40)
+with icon_cols[1]:
+    st.image("assets/instagram.png", width=40)
+with icon_cols[2]:
+    st.image("assets/twitter.png", width=40)
+with icon_cols[3]:
+    st.image("assets/linkedin.png", width=40)
+with icon_cols[4]:
+    st.image("assets/x.png", width=40)
 
 
 @st.cache_data
