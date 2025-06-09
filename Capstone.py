@@ -99,8 +99,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# --- Baris Icon berjajar di tengah ---
-cols = st.columns(5)
+# --- Icon Media Sosial di Tengah (Presisi) ---
+cols = st.columns([1, 1, 1, 1, 1])
 with cols[0]:
     st.image("assets/facebook.png", width=40)
 with cols[1]:
@@ -228,7 +228,11 @@ def estimate_engagement_from_user_input(post_type, gender, age_group, platform, 
     return model_engage.predict(X)[0]
 
 # --- UI Interaktif ---
-st.header("🧠 Simulasi Rekomendasi Konten & Estimasi Engagement")
+st.markdown(
+    "<h2 style='text-align: center;'>📊 Social Media Caption & Posting Analytics</h2>",
+    unsafe_allow_html=True
+)
+
 
 with st.form("recommendation_form"):
     caption_input = st.text_input("Masukkan Caption Anda")
