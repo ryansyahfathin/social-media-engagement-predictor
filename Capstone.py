@@ -192,11 +192,7 @@ def estimate_engagement_from_user_input(post_type, gender, age_group, platform, 
     }])
     return model_engage.predict(X)[0]
 
-# --- UI Interaktif ---
-st.markdown(
-    "<h2 style='text-align: center;'>📊 Social Media Caption & Posting Analytics</h2>",
-    unsafe_allow_html=True
-)
+# UI Simulasi
 
 
 with st.form("recommendation_form"):
