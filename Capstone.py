@@ -20,7 +20,7 @@ st.set_page_config(
     page_icon="📈"
 )
 
-
+# Styling header dan deskripsi
 st.markdown(
     """
     <style>
@@ -29,85 +29,47 @@ st.markdown(
         color: #3e2f1c;
     }
 
-    .stDataFrame div[data-testid="stTable"] {
-        background-color: #fff7e6 !important;
+    .icon-label {
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.9em;
+        margin-top: 4px;
     }
 
-    .stDataFrame table tbody tr:nth-child(even) {
-        background-color: #fff1dc !important;
+    .title-container {
+        text-align: center;
+        margin-bottom: 20px;
     }
 
-    .stDataFrame table tbody tr:nth-child(odd) {
-        background-color: #ffedd5 !important;
-    }
-
-    .stTextInput > div > div > input,
-    .stTextArea > div > textarea,
-    .stSelectbox > div > div,
-    .stMultiSelect > div > div,
-    .stNumberInput > div > div > input {
-        background-color: #ffe6ba !important;
-        border: 1px solid #f5b971 !important;
-        color: #3e2f1c !important;
-        font-weight: 500;
-    }
-
-    .stForm {
-        background-color: #fff1dc !important;
-        padding: 1.5rem;
-        border-radius: 0.75rem;
-        border: 1px solid #f2c185;
-    }
-
-    div.stButton > button {
-        background-color: #fff0c7 !important;
-        color: #a04c00 !important;
-        border: 2px solid #fbbf24 !important;
+    .highlight-text {
+        color: #cc0000;
         font-weight: bold;
-        border-radius: 0.5rem;
-        padding: 0.5rem 1.2rem;
-    }
-
-    div.stButton > button:hover {
-        background-color: #fcdca4 !important;
-        color: #78350f !important;
-    }
-
-    .stSuccess, .stInfo, .stWarning {
-        background-color: #fff6df !important;
-        border-left: 5px solid #f59e0b !important;
-        color: #3e2f1c !important;
-    }
-
-    .stDataFrame, .stExpander {
-        background-color: #fff9ea !important;
-        border-radius: 8px;
-    }
-
-    h1, h2, h3, h4, h5 {
-        color: #3e2f1c;
+        text-transform: uppercase;
     }
     </style>
 
-    <div style='text-align: center;'>
+    <div class="title-container">
         <span style="font-size:3em;">📊</span><br>
         <span style="font-size:1.8em; font-weight: bold;">Social Media Caption & Posting Analytics</span><br>
         <span style="font-size:1.2em; color:gray;">Boost Your Engagement with Smart Caption Analysis and Optimal Posting Times</span><br><br>
-        <span style="font-size:1em; color:#cc0000; font-weight: bold; text-transform: uppercase;">Only For English Caption</span><br><br>
+        <span class="highlight-text">Only For English Caption</span><br><br>
     </div>
     """,
     unsafe_allow_html=True
 )
 
-cols = st.columns(5)
-platforms = ["Facebook", "Instagram", "Twitter", "LinkedIn", "X"]
-icons = ["assets/facebook.png", "assets/instagram.png", "assets/twitter.png", "assets/linkedin.png", "assets/x.png"]
-sizes = [40, 40, 40, 40, 48]  # khusus X agak lebih besar
+# Layout icon pakai Streamlit columns (rapi & fleksibel)
+cols = st.columns(4)
 
-for i in range(5):
+platforms = ["Facebook", "Instagram", "LinkedIn", "X"]
+icons = ["assets/facebook.png", "assets/instagram.png", "assets/linkedin.png", "assets/x.png"]
+sizes = [60, 60, 60, 60]  # Ukuran seragam
+
+for i in range(4):
     with cols[i]:
         st.image(icons[i], width=sizes[i])
-        st.markdown(f"<div style='text-align:center; font-weight:bold; font-size:0.9em'>{platforms[i]}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='icon-label'>{platforms[i]}</div>", unsafe_allow_html=True)
+
 
 @st.cache_data
 def download_and_load_data():
