@@ -158,12 +158,13 @@ components.html(
     """
     <div style="display: flex; justify-content: center; margin: 20px 0;">
         <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/fz9f1MYMBjw?autoplay=1&mute=1&controls=1"
+        src="https://www.youtube.com/embed/fz9f1MYMBjw"
         title="YouTube video player" frameborder="0"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
     """,
-    height=350
+    height=350,
 )
 
 
