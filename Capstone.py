@@ -77,18 +77,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Layout icon pakai Streamlit columns (rapi & fleksibel)
-cols = st.columns(4)
-
-platforms = ["Facebook", "Instagram", "LinkedIn", "X"]
-icons = ["assets/facebook.png", "assets/instagram.png", "assets/linkedin.png", "assets/x.png"]
-sizes = [60, 60, 60, 60]  # Ukuran seragam
-
-for i in range(4):
-    with cols[i]:
-        st.image(icons[i], width=sizes[i])
-        st.markdown(f"<div class='icon-label'>{platforms[i]}</div>", unsafe_allow_html=True)
-
 
 @st.cache_data
 def download_and_load_data():
