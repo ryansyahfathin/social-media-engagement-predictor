@@ -12,59 +12,76 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from PIL import Image
 
-# Styling header dan deskripsi
+
 st.markdown(
     """
     <style>
-    .icon-row {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        flex-wrap: wrap;
-        margin-top: 20px;
+    /* Ubah latar belakang utama ke pastel */
+    html, body, [data-testid="stApp"], .main, .block-container {
+        background-color: #fff4e6 !important;  /* Peach pastel */
+        color: #3e2f1c;
     }
 
-    .icon-box {
-        text-align: center;
+    /* Style untuk form dan komponen input */
+    .stTextInput > div > div > input,
+    .stTextArea > div > textarea,
+    .stSelectbox > div > div,
+    .stMultiSelect > div > div,
+    .stNumberInput > div > div > input {
+        background-color: #ffe6ba !important;
+        border: 1px solid #f5b971 !important;
+        color: #3e2f1c !important;
+        font-weight: 500;
     }
 
-    .icon-label {
-        font-weight: 600;
-        font-size: 0.9em;
-        margin-top: 5px;
+    /* Styling button */
+    div.stButton > button {
+        background-color: #fff0c7 !important;
+        color: #a04c00 !important;
+        border: 2px solid #fbbf24 !important;
+        font-weight: bold;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    div.stButton > button:hover {
+        background-color: #fcdca4 !important;
+        color: #78350f !important;
+    }
+
+    /* Styling expander dan tabel dalamnya */
+    [data-testid="stExpander"] {
+        background-color: #fff9ea !important;
+        border: 1px solid #f2c185;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+
+    [data-testid="stExpander"] .stDataFrame div[data-testid="stTable"] {
+        background-color: #fff9ea !important;
+    }
+
+    [data-testid="stExpander"] .stDataFrame table tbody tr:nth-child(even) {
+        background-color: #fff3d6 !important;
+    }
+
+    [data-testid="stExpander"] .stDataFrame table tbody tr:nth-child(odd) {
+        background-color: #ffeccf !important;
+    }
+
+    /* Hapus header putih default Streamlit */
+    header, .css-18ni7ap.e8zbici2 {
+        display: none !important;
+    }
+
+    [data-testid="stAppViewContainer"] > .main {
+        padding-top: 0rem !important;
     }
     </style>
-
-    <div style='text-align: center;'>
-        <span style="font-size:3em;">📊</span><br>
-        <span style="font-size:1.8em; font-weight: bold;">Social Media Caption & Posting Analytics</span><br>
-        <span style="font-size:1.2em; color:gray;">Boost Your Engagement with Smart Caption Analysis and Optimal Posting Times</span><br><br>
-        <span style="font-size:1em; color:#cc0000; font-weight: bold; text-transform: uppercase;">Only For English Caption</span><br><br>
-    </div>
-
-    <div class="icon-row">
-        <div class="icon-box">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="50"/>
-            <div class="icon-label">Facebook</div>
-        </div>
-        <div class="icon-box">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="50"/>
-            <div class="icon-label">Instagram</div>
-        </div>
-        <div class="icon-box">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="50"/>
-            <div class="icon-label">LinkedIn</div>
-        </div>
-        <div class="icon-box">
-            <img src="https://github.com/error404-sudo/NewCapstone/raw/main/X.png" width="50"/>
-            <div class="icon-label">X</div>
-        </div>
-    </div>
-    </style>
-
     """,
     unsafe_allow_html=True
 )
+
 
 
 @st.cache_data
