@@ -153,19 +153,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# === Video YouTube (autoplay, mute) ===
-components.html(
-    """
-    <div style="display: flex; justify-content: center; margin: 20px 0;">
-        <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/fz9f1MYMBjw"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-    """,
-    height=350,
-)
+st.video("https://www.youtube.com/watch?v=fz9f1MYMBjw")
 
 
 
