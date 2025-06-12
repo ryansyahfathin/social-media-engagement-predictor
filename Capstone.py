@@ -121,10 +121,7 @@ st.markdown(
         margin-top: 4px;
     }
     </style>
-    """
-)
-st.markdown(
-    """
+    
     <!-- Judul dan subtitle -->
     <div class="title-container">
         <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" width="60"/>
