@@ -69,7 +69,7 @@ st.markdown(
             <div class="icon-label">LinkedIn</div>
         </div>
         <div class="icon-box">
-            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" width="50"/>
+            <img src="https://github.com/error404-sudo/NewCapstone/raw/main/X.png" width="50"/>
             <div class="icon-label">X</div>
         </div>
     </div>
