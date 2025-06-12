@@ -278,14 +278,11 @@ with st.form("recommendation_form"):
     caption_input = st.text_input("Masukkan Caption Anda")
     post_type_input = st.selectbox("Jenis Post:", ["Video", "Image", "Link"])
     gender_input = st.selectbox("Gender Audiens:", ["Male", "Female", "Other"])
-    age_group_label = (
-    "Kelompok Umur:\n\n"
-    "- Adolescent Adults (18–25)"
-    "- Mature Adults (26–45)"
-    "- Senior Adults (60+)"
+    age_group_input = st.selectbox(
+    "Kelompok Umur:  \n"
+    "*_Adolescent (18–25) • Mature (26–45) • Senior (60+)_*",
+    ["Senior Adults", "Mature Adults", "Adolescent Adults"]
     )
-    age_group_input = st.selectbox(age_group_label, ["Senior Adults", "Mature Adults", "Adolescent Adults"])
-
     platform_input = st.selectbox("Platform:", ["All", "Instagram", "Facebook", "Twitter", "LinkedIn"])
     submitted = st.form_submit_button("🔍 Jalankan Rekomendasi")
 
