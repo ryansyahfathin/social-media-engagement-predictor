@@ -280,19 +280,10 @@ with st.form("recommendation_form"):
     gender_input = st.selectbox("Gender Audiens:", ["Male", "Female", "Other"])
     age_group_input = st.selectbox("Kelompok Umur:", ["Senior Adults", "Mature Adults", "Adolescent Adults"])
     # Tambah notes di bawah dropdown
-    st.markdown(
-        """
-        <div style='font-size: 0.85em; color: #6e5846; margin-top: -5px; margin-bottom: 15px;'>
-            <b>Keterangan:</b><br>
-            <ul style="padding-left: 1.2em; margin-top: 0.3em;">
-                <li><b>Adolescent Adults</b>: 18–25 tahun — Masa transisi dari remaja ke dewasa, biasanya sedang kuliah atau baru kerja.</li>
-                <li><b>Mature Adults</b>: 26–45 tahun — Umumnya sudah mapan secara emosional dan profesional.</li>
-                <li><b>Senior Adults</b>: 60 tahun ke atas — Memasuki usia pensiun dan perhatian lebih pada kesehatan.</li>
-            </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.caption("📌 Keterangan:")
+    st.caption("- **Adolescent Adults**: 18–25 tahun.")
+    st.caption("- **Mature Adults**: 26–45 tahun.")
+    st.caption("- **Senior Adults**: 60 tahun.")
     platform_input = st.selectbox("Platform:", ["All", "Instagram", "Facebook", "Twitter", "LinkedIn"])
     submitted = st.form_submit_button("🔍 Jalankan Rekomendasi")
 
