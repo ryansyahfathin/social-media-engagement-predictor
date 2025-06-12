@@ -16,63 +16,13 @@ from PIL import Image
 st.markdown(
     """
     <style>
-
+    /* Background utama */
     html, body, [data-testid="stApp"], .main, .block-container {
         background-color: #fff4e6 !important;
         color: #3e2f1c;
     }
 
-    .icon-row {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        flex-wrap: wrap;
-        margin-top: 20px;
-    }
-
-    .icon-box {
-        text-align: center;
-    }
-
-    .icon-label {
-        font-weight: 600;
-        font-size: 0.9em;
-        margin-top: 5px;
-    }
-
-    <div style='text-align: center;'>
-        <span style="font-size:3em;">📊</span><br>
-        <span style="font-size:1.8em; font-weight: bold;">Social Media Caption & Posting Analytics</span><br>
-        <span style="font-size:1.2em; color:gray;">Boost Your Engagement with Smart Caption Analysis and Optimal Posting Times</span><br><br>
-        <span style="font-size:1em; color:#cc0000; font-weight: bold; text-transform: uppercase;">Only For English Caption</span><br><br>
-    </div>
-
-    <div class="icon-row">
-        <div class="icon-box">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="50"/>
-            <div class="icon-label">Facebook</div>
-        </div>
-        <div class="icon-box">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="50"/>
-            <div class="icon-label">Instagram</div>
-        </div>
-        <div class="icon-box">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="50"/>
-            <div class="icon-label">LinkedIn</div>
-        </div>
-        <div class="icon-box">
-            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" width="50"/>
-            <div class="icon-label">X</div>
-        </div>
-    </div>
-    
-    /* Ubah latar belakang utama ke pastel */
-    html, body, [data-testid="stApp"], .main, .block-container {
-        background-color: #fff4e6 !important;  /* Peach pastel */
-        color: #3e2f1c;
-    }
-
-    /* Style untuk form dan komponen input */
+    /* Input fields */
     .stTextInput > div > div > input,
     .stTextArea > div > textarea,
     .stSelectbox > div > div,
@@ -84,7 +34,7 @@ st.markdown(
         font-weight: 500;
     }
 
-    /* Styling button */
+    /* Button style */
     div.stButton > button {
         background-color: #fff0c7 !important;
         color: #a04c00 !important;
@@ -99,7 +49,7 @@ st.markdown(
         color: #78350f !important;
     }
 
-    /* Styling expander dan tabel dalamnya */
+    /* Expander style */
     [data-testid="stExpander"] {
         background-color: #fff9ea !important;
         border: 1px solid #f2c185;
@@ -119,7 +69,7 @@ st.markdown(
         background-color: #ffeccf !important;
     }
 
-    /* Hapus header putih default Streamlit */
+    /* Header Streamlit hilang */
     header, .css-18ni7ap.e8zbici2 {
         display: none !important;
     }
@@ -127,10 +77,83 @@ st.markdown(
     [data-testid="stAppViewContainer"] > .main {
         padding-top: 0rem !important;
     }
+
+    /* Logo + Judul */
+    .title-container {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+
+    .title-container h1 {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 0.2rem;
+    }
+
+    .title-container p {
+        font-size: 1.1em;
+        color: gray;
+        margin-top: 0;
+    }
+
+    .highlight-text {
+        color: #cc0000;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+
+    .icon-row {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .icon-box {
+        text-align: center;
+    }
+
+    .icon-label {
+        font-weight: 600;
+        font-size: 0.9em;
+        margin-top: 4px;
+    }
     </style>
+
+    <!-- Judul dan subtitle -->
+    <div class="title-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" width="60"/>
+        <h1>Social Media Caption & Posting Analytics</h1>
+        <p>Boost Your Engagement with Smart Caption Analysis and Optimal Posting Times</p>
+        <p class="highlight-text">ONLY FOR ENGLISH CAPTION</p>
+    </div>
+
+    <!-- Logo Media Sosial -->
+    <div class="icon-row">
+        <div class="icon-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="45"/>
+            <div class="icon-label">Facebook</div>
+        </div>
+        <div class="icon-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="45"/>
+            <div class="icon-label">Instagram</div>
+        </div>
+        <div class="icon-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="45"/>
+            <div class="icon-label">LinkedIn</div>
+        </div>
+        <div class="icon-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" width="45"/>
+            <div class="icon-label">X</div>
+        </div>
+    </div>
     """,
     unsafe_allow_html=True
 )
+
 
 
 
