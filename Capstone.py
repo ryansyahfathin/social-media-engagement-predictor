@@ -16,6 +16,24 @@ from PIL import Image
 st.markdown(
     """
     <style>
+    /* Hilangkan header Streamlit */
+    header, .css-18ni7ap.e8zbici2 {
+        display: none !important;
+    }
+    
+    /* Hapus padding margin atas default */
+    [data-testid="stAppViewContainer"] > .main {
+        padding-top: 0rem !important;
+    }
+    
+    /* Optional: Hilangkan logo GitHub pojok kanan kalau tidak pakai */
+    #MainMenu, footer {
+        visibility: hidden;
+    }
+    </style>
+
+    
+    <style>
     html, body, [data-testid="stApp"], .main, .block-container {
         background-color: #fff4e6 !important;
         color: #3e2f1c;
