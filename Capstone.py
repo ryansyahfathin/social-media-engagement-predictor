@@ -12,6 +12,17 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from PIL import Image
 
+st.markdown(
+    """
+    <iframe width="100%" height="360"
+    src="https://www.youtube.com/embed/fz9f1MYMBjw?autoplay=1&mute=1&controls=1"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+    ></iframe>
+    """,
+    unsafe_allow_html=True
+)
 
 st.markdown(
     """
