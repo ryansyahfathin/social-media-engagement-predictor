@@ -25,28 +25,22 @@ st.markdown(
     """
     <style>
     html, body, [data-testid="stApp"], .main, .block-container {
-        background-color: #fff4e6 !important;  /* Peach pastel background */
+        background-color: #fff4e6 !important;
         color: #3e2f1c;
     }
 
-    /* Gaya untuk background tabel dataframe */
     .stDataFrame div[data-testid="stTable"] {
-        background-color: #fff7e6 !important; /* peach pastel */
+        background-color: #fff7e6 !important;
     }
 
-    /* Optional: warna latar sel ganjil-genap */
     .stDataFrame table tbody tr:nth-child(even) {
-        background-color: #fff1dc !important;  /* lebih terang */
+        background-color: #fff1dc !important;
     }
 
     .stDataFrame table tbody tr:nth-child(odd) {
-        background-color: #ffedd5 !important;  /* sedikit kontras pastel */
+        background-color: #ffedd5 !important;
     }
-    <div style="text-align: center;">
-        <h1>📊 Social Media Caption & Posting Analytics<</h1>
-    </div>
 
-    /* Fix warna tombol, teks input, dropdown, dsb. agar tetap kontras */
     .stTextInput > div > div > input,
     .stTextArea > div > textarea,
     .stSelectbox > div > div,
@@ -94,23 +88,26 @@ st.markdown(
         color: #3e2f1c;
     }
     </style>
-    
+
+    <div style='text-align: center;'>
+        <span style="font-size:3em;">📊</span><br>
+        <span style="font-size:1.8em; font-weight: bold;">Social Media Caption & Posting Analytics</span><br>
+        <span style="font-size:1.2em; color:gray;">Boost Your Engagement with Smart Caption Analysis and Optimal Posting Times</span><br><br>
+        <span style="font-size:1em; color:#cc0000; font-weight: bold; text-transform: uppercase;">Only For English Caption</span><br><br>
+    </div>
     """,
     unsafe_allow_html=True
 )
 
-# --- Icon Media Sosial di Tengah (Presisi) ---
-cols = st.columns([1, 1, 1, 1, 1])
-with cols[0]:
-    st.image("assets/facebook.png", width=40)
-with cols[1]:
-    st.image("assets/instagram.png", width=40)
-with cols[2]:
-    st.image("assets/twitter.png", width=40)
-with cols[3]:
-    st.image("assets/linkedin.png", width=40)
-with cols[4]:
-    st.image("assets/x.png", width=48)
+cols = st.columns(5)
+platforms = ["Facebook", "Instagram", "Twitter", "LinkedIn", "X"]
+icons = ["assets/facebook.png", "assets/instagram.png", "assets/twitter.png", "assets/linkedin.png", "assets/x.png"]
+sizes = [40, 40, 40, 40, 48]  # khusus X agak lebih besar
+
+for i in range(5):
+    with cols[i]:
+        st.image(icons[i], width=sizes[i])
+        st.markdown(f"<div style='text-align:center; font-weight:bold; font-size:0.9em'>{platforms[i]}</div>", unsafe_allow_html=True)
 
 @st.cache_data
 def download_and_load_data():
