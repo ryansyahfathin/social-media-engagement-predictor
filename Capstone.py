@@ -30,10 +30,7 @@ st.markdown(
     #MainMenu, footer {
         visibility: hidden;
     }
-    </style>
-
     
-    <style>
     html, body, [data-testid="stApp"], .main, .block-container {
         background-color: #fff4e6 !important;
         color: #3e2f1c;
@@ -83,6 +80,36 @@ st.markdown(
             <div class="icon-label">X</div>
         </div>
     </div>
+    
+    /* Atur background container expander dan isi tabel */
+    [data-testid="stExpander"] {
+        background-color: #fff9ea !important;  /* pastel kuning muda */
+        border: 1px solid #f2c185;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    
+    /* Ubah warna background tabel (baik header maupun row) */
+    [data-testid="stExpander"] .stDataFrame div[data-testid="stTable"] {
+        background-color: #fff9ea !important;
+    }
+    
+    /* Atur warna baris ganjil genap agar serasi */
+    [data-testid="stExpander"] .stDataFrame table tbody tr:nth-child(even) {
+        background-color: #fff3d6 !important;
+    }
+    
+    [data-testid="stExpander"] .stDataFrame table tbody tr:nth-child(odd) {
+        background-color: #ffeccf !important;
+    }
+    
+    /* Tambahan: header kolom */
+    [data-testid="stExpander"] .stDataFrame table thead {
+        background-color: #ffe4ba !important;
+    }
+    </style>
+
+
     """,
     unsafe_allow_html=True
 )
