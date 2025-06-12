@@ -13,15 +13,16 @@ from sklearn.metrics import mean_squared_error
 import streamlit.components.v1 as components
 from PIL import Image
 
-# === Styling CSS ===
 st.markdown(
     """
     <style>
+    /* Background utama */
     html, body, [data-testid="stApp"], .main, .block-container {
         background-color: #fff4e6 !important;
         color: #3e2f1c;
     }
 
+    /* Input fields */
     .stTextInput > div > div > input,
     .stTextArea > div > textarea,
     .stSelectbox > div > div,
@@ -33,6 +34,7 @@ st.markdown(
         font-weight: 500;
     }
 
+    /* Button style */
     div.stButton > button {
         background-color: #fff0c7 !important;
         color: #a04c00 !important;
@@ -47,6 +49,7 @@ st.markdown(
         color: #78350f !important;
     }
 
+    /* Expander style */
     [data-testid="stExpander"] {
         background-color: #fff9ea !important;
         border: 1px solid #f2c185;
@@ -66,6 +69,7 @@ st.markdown(
         background-color: #ffeccf !important;
     }
 
+    /* Header Streamlit hilang */
     header, .css-18ni7ap.e8zbici2 {
         display: none !important;
     }
@@ -74,6 +78,7 @@ st.markdown(
         padding-top: 0rem !important;
     }
 
+    /* Logo + Judul */
     .title-container {
         text-align: center;
         margin-top: 10px;
@@ -117,13 +122,11 @@ st.markdown(
         margin-top: 4px;
     }
     </style>
-    """,
-    unsafe_allow_html=True
+    """
 )
-
-# === Judul & Icon Sosial Media ===
 st.markdown(
     """
+    <!-- Judul dan subtitle -->
     <div class="title-container">
         <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" width="60"/>
         <h1>Social Media Caption & Posting Analytics</h1>
@@ -131,6 +134,7 @@ st.markdown(
         <p class="highlight-text">ONLY FOR ENGLISH CAPTION</p>
     </div>
 
+    <!-- Logo Media Sosial -->
     <div class="icon-row">
         <div class="icon-box">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="45"/>
@@ -152,8 +156,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-st.video("https://www.youtube.com/watch?v=fz9f1MYMBjw")
 
 
 
