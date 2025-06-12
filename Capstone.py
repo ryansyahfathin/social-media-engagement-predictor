@@ -10,7 +10,6 @@ from transformers import pipeline
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
-import streamlit.components.v1 as components
 from PIL import Image
 
 st.markdown(
