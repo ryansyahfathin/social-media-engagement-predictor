@@ -16,6 +16,56 @@ from PIL import Image
 st.markdown(
     """
     <style>
+
+    html, body, [data-testid="stApp"], .main, .block-container {
+        background-color: #fff4e6 !important;
+        color: #3e2f1c;
+    }
+
+    .icon-row {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .icon-box {
+        text-align: center;
+    }
+
+    .icon-label {
+        font-weight: 600;
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+
+    <div style='text-align: center;'>
+        <span style="font-size:3em;">📊</span><br>
+        <span style="font-size:1.8em; font-weight: bold;">Social Media Caption & Posting Analytics</span><br>
+        <span style="font-size:1.2em; color:gray;">Boost Your Engagement with Smart Caption Analysis and Optimal Posting Times</span><br><br>
+        <span style="font-size:1em; color:#cc0000; font-weight: bold; text-transform: uppercase;">Only For English Caption</span><br><br>
+    </div>
+
+    <div class="icon-row">
+        <div class="icon-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="50"/>
+            <div class="icon-label">Facebook</div>
+        </div>
+        <div class="icon-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="50"/>
+            <div class="icon-label">Instagram</div>
+        </div>
+        <div class="icon-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="50"/>
+            <div class="icon-label">LinkedIn</div>
+        </div>
+        <div class="icon-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" width="50"/>
+            <div class="icon-label">X</div>
+        </div>
+    </div>
+    
     /* Ubah latar belakang utama ke pastel */
     html, body, [data-testid="stApp"], .main, .block-container {
         background-color: #fff4e6 !important;  /* Peach pastel */
