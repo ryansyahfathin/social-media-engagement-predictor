@@ -12,14 +12,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from PIL import Image
 
-# --- Konfigurasi Awal ---
-st.set_page_config(
-    page_title="📊 Capstone Engagement Dashboard",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    page_icon="📈"
-)
-
 # Styling header dan deskripsi
 st.markdown(
     """
